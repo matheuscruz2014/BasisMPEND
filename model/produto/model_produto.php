@@ -24,7 +24,7 @@
              return true;
         }
         public function __list($descricao){
-                  $sql = "SELECT CODPRODUTO,CODIGO_FABRICA,DESCRICAO,APLICACAO FROM produto WHERE ";
+                  $sql = "SELECT CODPRODUTO,CODIGO_FABRICA,DESCRICAO,APLICACAO FROM PRODUTO WHERE ";
                   
                   $sql .= "DESCRICAO LIKE '%".$descricao."%' LIMIT 100";
                   

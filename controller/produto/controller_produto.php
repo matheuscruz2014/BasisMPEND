@@ -71,10 +71,21 @@ class controller_produto extends Controle{
                            echo json_encode($o_conexao);
                   }
         }
+		
+		/*
+		ENVIO - POST: descricao
+		
+		RETORNO - LISTA JSON: produto {
+			produto_id;
+        	codigo_fabrica;
+			descricao;
+			aplicacao;
+		}.*/
+		
         public function getProdutosAction(){
             
-            if(isset($_GET['descricao'])){
-                $descricao = $this->validaInput($_GET['descricao']);
+            if(isset($_POST['descricao'])){
+                $descricao = $this->validaInput($_POST['descricao']);
                 echo json_encode($this->model->__list($descricao));
             }else{
                  echo "FALSE";
